@@ -1,1 +1,0 @@
-# quarkus-demo-presentation

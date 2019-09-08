@@ -18,12 +18,12 @@
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Ubuntu', sans-serif;
-$mainColor: #000;
+$mainColor: rgb(53, 226, 232);
 $headingFont: 'Ubuntu', sans-serif;
-$headingColor: #383D3D;
+$headingColor: rgb(40, 236, 242);
 $headingTextShadow: none;
 $headingTextTransform: none;
-$backgroundColor: #F0F1EB;
+$backgroundColor: #000000;
 $linkColor: #51483D;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #26351C;
