@@ -1,0 +1,40 @@
+# Quarkus
+
+## 1. slide 1 - Introduction
+
+## 2. Histoire
+** Java 1996
+** JavaEE 6
+
+dernière version "oracle" de javaEE
+
+** Spring boot - 2013
+
+Spring boot 2 en 2018
+
+** Puis en 2019 
+
+Un peu avant devoxx
+
+## 3. Quarkus
+
+Supersonic --> très rapide
+
+Subatomic --> quark, composant des neutron, proton etc...
+
+Java, parce que Java FTW
+
+** Les promesses de Quarkus
+
+Rapide avec une empreinte mémoire minimale
+
+** memory and boot
+
+On parle de memoire RSS, car on parle de l'empreinte mémoire de la totalité de l'application (JVM et application) pas seulement du heap
+
+Par exemple, une application exposant une simple API REST (sans rien d'autre)
+
+** memory and boot (JPA)
+
+En ajoutant la stack d'accès à une couche de persistance
+
