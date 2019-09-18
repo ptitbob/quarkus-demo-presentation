@@ -38,3 +38,43 @@ Par exemple, une application exposant une simple API REST (sans rien d'autre)
 
 En ajoutant la stack d'accès à une couche de persistance
 
+** first response time
+
+Un temps de réponse minimal en natif, mais cela on le verra plus loin.
+
+## 4. Quarkus et les standard
+
+** Basé sur les standards
+
+Tous le monde a déjà de l'experience avec Quarkus
+
+** Quels standards ?
+
+** microprofile ?????
+
+** Vert.X
+
+** JSON
+
+** Spring starter ??? --> code.quarkus.io !
+
+
+
+
+
+
+---
+En vrac :
+
+* hibernate avec panache
+* demo reboot time
+* notion de full code explorer
+* les bonne idée de Play 1 
+* suppression de la couche DAO
+* Possibilité de faire de l'imperatif et du stream au niveau de la même API
+* Mix undertow / vert.x
+* build docker multi stage --> compilation GraalVM --> image minimal d'execution
+* fonctionnement as exec natif
+* demo starter quarkus
+* les extensions 
+* demo de scalabilité horizontale --> puppet ?
