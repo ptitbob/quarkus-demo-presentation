@@ -60,7 +60,7 @@ On verra cela pour la démo<!-- .element class="fragment" -->
 
 ## RestEasy
 
-Implementation JAX-RS
+Implémentation JAX-RS
 
 -@-
 
