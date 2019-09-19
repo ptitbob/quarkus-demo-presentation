@@ -37,7 +37,7 @@
 
 ## Hibernate
 
-***Implenetation JPA***
+***Implémentation JPA***
 la plus connue
 
 -@@-
