@@ -1,0 +1,44 @@
+    <section>
+        <img src="./images/graalvm.png" style="border: none; max-width: 90%;">
+        <h3>Polyglot, Native or JVM</h3><h3>Embeddable</h3>
+    </section>
+    <section>
+        <img src="./images/graalvm.png" style="border: none; ">
+        <div>
+                <ul>
+                        <li class="fragment">Compilation native</li>
+                        <li class="fragment">multi OS</li>
+                </ul>
+            </div>
+        <h3 class="fragment"><a href="https://www.graalvm.org/">www.graalvm.org</a></h3>
+    </section>
+    <section>
+        <div>
+            <img src="./images/graalvm.png">
+        </div>
+        <img src="./images/native-image-process.png" style="background-color: rgb(40, 236, 242); max-width: 60%;">
+    </section>
+    <section>
+        <div>
+                <img src="./images/graalvm.png" style="width: 20%">
+        </div>
+        <h3>Non supporté</h3>
+        <ul>
+            <li>Classloading dynamique - pas de classloader</li>
+            <li>Invokedynamic</li>
+            <li>finalizer <span class="fragment" style="color: crimson">C'est mal, vous le saviez</span></li>
+            <li>security manager</li>
+        </ul>
+    </section>
+    <section>
+            <div>
+                    <img src="./images/graalvm.png" style="width: 20%">
+            </div>
+            <h3>supporté Mais avec des adaptations</h3>
+            <ul>
+                <li>Réflection (mise en place manuelle)</li>
+                <li>JNI (pareil)</li>
+                <li>Initialisation statique <span class="fragment">(<span style="font-style: italic; color: crimson">warmup</span>)</span></li>
+            </ul>
+        </section>
+    

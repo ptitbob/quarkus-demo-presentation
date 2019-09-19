@@ -1,0 +1,61 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is brown.
+ *
+ * This theme is Copyright (C) 2012-2013 Owen Versteeg, http://owenversteeg.com - it is MIT licensed.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../../reveal/base/scss/smixins";
+@import "../../reveal/revealjs/css/theme/template/settings";
+// ---------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Bangers|Black+Ops+One');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Ubuntu', sans-serif;
+$mainColor: rgb(53, 226, 232);
+$headingFont: 'Ubuntu', sans-serif;
+$headingColor: rgb(40, 236, 242);
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #000000;
+$linkColor: #51483D;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #26351C;
+
+.reveal a {
+  line-height: 1.3em;
+}
+
+// Background generator
+@mixin bodyBackground() {
+	$bckImage: url("images/Mammoth_Seated_128x128-2.png") no-repeat top 20px left 10px;
+	background: $bckImage;
+}
+
+// Theme template ------------------------------
+@import "../../reveal/revealjs/css/theme/template/theme";
+// ---------------------------------------------
+
+.reveal {
+	.progress {
+		color: crimson;
+	}
+	section {
+		img {
+			border: none;
+			background: none;
+			box-shadow: none;
+			max-height: 600px
+		}
+		blockquote {
+			box-shadow: none;
+			font-family: 'Indie Flower', cursive;
+		}
+	}
+}
