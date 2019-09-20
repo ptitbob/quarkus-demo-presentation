@@ -34,7 +34,7 @@ $selectionBackgroundColor: #26351C;
 
 // Background generator
 @mixin bodyBackground() {
-	$bckImage: url("images/Mammoth_Seated_128x128-2.png") no-repeat top 20px left 10px;
+	$bckImage: url("images/Mammoth_Seated_128x128-2.png") no-repeat bottom 20px left 10px;
 	background: $bckImage;
 }
 

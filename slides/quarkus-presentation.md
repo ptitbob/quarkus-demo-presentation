@@ -1,27 +1,44 @@
 
 ## Quarkus
 
-***Tout le monde a 10 ans d'XP***
+***Tout le monde a 5 ans d'XP***
 
 -@-
 
 ## Quarkus
 
-***MicroProfile, Hibernate***<!-- .element class="fragment" -->
+> Les meilleures bibliothèques et normes
 
-***apache camel, RestEasy, Kafka***<!-- .element class="fragment" -->
+***MicroProfile, Hibernate***
 
-***Vert.X, undertow***<!-- .element class="fragment" -->
+***apache camel, RestEasy, Kafka***
 
-***etc...***<!-- .element class="fragment" -->
+***Vert.X, undertow***
+
+-@-
+
+## Quarkus
+
+> Les meilleures bibliothèques et normes
+
+![](images/librairies_standards.jpg)
 
 -@-
 
 ## Microprofile
 
-### 2016, la v1<!-- .element class="fragment"-->
+The MicroProfile is a baseline platform definition that optimizes Enterprise Java for a microservices architecture and delivers application portability across multiple MicroProfile runtimes.  
 
-**CDI, JSON-P, JAX-RS**<!-- .element class="fragment"-->
+
+*- MicroProfile FAQ*<!-- .element style="color: #e57125; float: right" -->
+
+-@@-
+
+## Microprofile
+
+### 2016, la v1
+
+**CDI, JSON-P, JAX-RS**
 
 -@@-
 
@@ -31,7 +48,7 @@
 
 **CDI, JSON-P, JSON-B, JAX-RS**
 
-*et plein d'autre spec, mais facultative*
+*Config, Health Check, Metrics, Fault Tolerance, JWT Propagation, Rest Client, Open API, OpenTracing*<!-- .element style="font-size: 80%;" -->
 
 -@-
 
