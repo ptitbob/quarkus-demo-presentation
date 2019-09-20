@@ -10,7 +10,7 @@
 
 ## Configuration
 
-> microprofile version 1 +
+> microprofile version 1.1 +
 
 -@@-
 
