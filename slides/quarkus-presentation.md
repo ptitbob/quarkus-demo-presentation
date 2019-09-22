@@ -32,6 +32,9 @@ The MicroProfile is a baseline platform definition that optimizes Enterprise Jav
 
 *- MicroProfile FAQ*<!-- .element style="color: #e57125; float: right" -->
 
+notes:
+MicroProfile is an open-source specification that brings a number of microservices-centric features to the Java EE ecosystem.
+
 -@@-
 
 ## Microprofile
