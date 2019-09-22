@@ -1,0 +1,4 @@
+mvn io.quarkus:quarkus-maven-plugin:create -DprojectGroupId=fr.sihm.sandbox -DprojectArtifactId=sihm -DclassName=HelloEndpoint -Dpath="/hello"
+
+ps x -o rss,command | grep demo-config
+

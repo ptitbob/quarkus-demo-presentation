@@ -50,6 +50,12 @@ Mais pour des besoins avancés, il est possible de mettre en place ce fichier
 
 -@@-
 
+## Hibernate / DAO
+
+# Demo
+
+-@@-
+
 ## Hibernate avec Panache
 
 > Là cela commence a devenir fun :)
