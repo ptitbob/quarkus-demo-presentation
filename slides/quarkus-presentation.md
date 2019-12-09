@@ -19,7 +19,7 @@
 
 ## Quarkus
 
-> Les meilleures bibliothèques et normes
+> Les "meilleures" bibliothèques et normes
 
 ![](images/librairies_standards.jpg)
 
