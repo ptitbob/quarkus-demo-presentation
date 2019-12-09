@@ -24,7 +24,7 @@ Jackson                                  quarkus-jackson
 ```
 <!-- .element class="fragment" -->
 
-> Il y en a 55 actuellement<!-- .element class="fragment" -->
+> Il y en a 72 actuellement<!-- .element class="fragment" -->
 
 -@@-
 
