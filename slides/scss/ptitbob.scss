@@ -11,7 +11,7 @@
 @import "../../reveal/revealjs/css/theme/template/settings";
 // ---------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Bangers|Black+Ops+One');
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
@@ -57,6 +57,9 @@ $selectionBackgroundColor: #26351C;
 			box-shadow: none;
 			font-family: 'Indie Flower', cursive;
 			background-color: #000000;
+		}
+		strong {
+			font-weight: bold;
 		}
 	}
 }
