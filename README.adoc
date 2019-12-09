@@ -2,11 +2,7 @@
 
 
 ---
-.Contenu
-. Introduction
-. Quarkus, c'est quoi ?
-.. Microprofile ? 
-.. Compilation native
-... graalVM
-.. ORM avec Panache ?
-. une demo ?
+
+. v1 : link:http://www.shipstone.org/_conf/quarkus/v1/#/[http://www.shipstone.org/_conf/quarkus/v1]
+. v2 : link:http://www.shipstone.org/_conf/quarkus/v2/#/[http://www.shipstone.org/_conf/quarkus/v2]
+
