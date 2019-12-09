@@ -32,7 +32,7 @@ La bonne idée de *Spring Initializr*
 
 ### code.quarkus.io
 
-![](images/quarkus_code.jpg)
+![](images/quarkus_code2.jpg)
 
 -@@-
 

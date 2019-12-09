@@ -1,0 +1,54 @@
+
+## 7.3
+
+`java -jar target/ping-spring-0.0.1-SNAPSHOT.jar`
+
+`ps x -o pid,rss,command | grep java`
+
+
+
+
+
+## Demo Spring
+
+Jouons un peu avec la mémoire
+
+Lancer l'app exemple Spring sans limitation
+
+`java -jar ./target/demo-spring-mvc-0.0.1-SNAPSHOT.jar`
+
+`ps x -o pid,rss,command | grep java`
+
+
+
+
+
+
+
+
+--> _600 Mo_
+
+`httpstat http:/localhost:8080/villes`
+
+Maintenant, mettons l'application sous pression
+
+`java -Xmx16m -Xms16m -jar ./target/demo-spring-mvc-0.0.1-SNAPSHOT.jar`
+
+--> _ça plante_
+
+augmentons un peu, histoire que cela se lance
+
+`java -Xmx17m -Xms17m -jar ./target/demo-spring-mvc-0.0.1-SNAPSHOT.jar``
+
+`httpstat http:/localhost:8080/villes`
+
+--> _c'est long_
+
+
+## Demo Quarkus
+
+## Multistage
+
+`docker build -f src/main/docker/Dockerfile.native.multi . -t sihm/quarkus-demo-native:1.0`
+
+`docker build -f src/main/docker/Dockerfile.jvm.multi . -t sihm/quarkus-demo-jvm:1.0`
