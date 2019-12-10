@@ -124,7 +124,77 @@ org.acme.quickstart.repository.HelloRepository/mp-rest/scope=javax.inject.Single
 public interface HelloRepository {
 ```
 
+### Health
 
+```java
+@Liveness
+@ApplicationScoped
+public class GreetingHealth implements HealthCheck {
+  @Override
+  public HealthCheckResponse call() {
+    return HealthCheckResponse.up("Greeting health");
+  }
+
+}
+```
+
+***REST Health check***
+
+```java
+@RegisterRestClient(baseUri = "http://localhost:8083")
+@Produces({MediaType.TEXT_PLAIN})
+@Path("/health")
+public interface HelloHealthRepository {
+  @GET
+  String getHealth();
+}
+```
+
+```java
+@ApplicationScoped
+@Liveness
+public class HelloHealthChecker implements HealthCheck {
+
+  @Inject
+  @RestClient
+  HelloHealthRepository helloHealthRepository;
+
+  @Override
+  public HealthCheckResponse call() {
+    try {
+      helloHealthRepository.getHealth();
+      return HealthCheckResponse.up("Serveur Hello");
+    } catch (Throwable throwable) {
+      return HealthCheckResponse.down("Serveur Hello");
+    }
+  }
+}
+```
+
+***Base de donnée***
+
+Rajouter ces dependances: 
+
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-hibernate-orm-panache</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-postgresql</artifactId>
+    </dependency>
+
+    lancer la base de la demo complete
+
+    `docker-compose -f docker-compose.yml up db`
+
+Ajouter cette configuration
+```
+quarkus.datasource.url=jdbc:postgresql://localhost:5432/postgres
+quarkus.datasource.driver=org.postgresql.Driver
+quarkus.datasource.username=postgres
+quarkus.datasource.password=postgres
+```
 
 
 
