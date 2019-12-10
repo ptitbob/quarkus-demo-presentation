@@ -111,12 +111,6 @@ En génie logiciel, le patron de conception (design pattern) active record (enre
 
 Les entité herite de `PanacheEntity`
 
-![](images/panache/PanacheEntity.png)
-
--@@-
-
-### Hibernate with *Panache*
-
 ```java
 @Entity
 public class City extends PanacheEntity {
@@ -149,7 +143,7 @@ public class City extends PanacheEntity {
 
 `PanacheEntity` est **opinionated**<!-- .element style="color: crimson" --> !
 
-L'id "panache a besoin d'une sequence hibernate !<!-- .element class="fragment" -->
+L'id "panache" a besoin d'une sequence hibernate !<!-- .element class="fragment" -->
 
 -@@-
 
