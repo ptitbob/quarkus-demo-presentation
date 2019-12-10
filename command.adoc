@@ -21,6 +21,111 @@ Lancer l'app exemple Spring sans limitation
 
 
 
+## Création projet
+
+mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=getting-started -DclassName="org.acme.quickstart.GreetingResource" -Dpath="/hello"
+
+## Jouons avec las APIs
+
+### JAXRS
+
+mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=getting-started -DclassName="org.acme.quickstart.GreetingResource" -Dpath="/hello"
+
+public class ItemDTO {
+
+  public String id;
+
+  public String subId;
+
+}
+
+mvn quarkus:add-extensions -Dextension=quarkus-resteasy-jsonb
+
+        ItemDTO itemDTO = new ItemDTO();
+        itemDTO.id = id;
+        itemDTO.subId = "sub-" + id;
+        return Response.ok().entity(itemDTO).header("message", "yolo !").build();
+
+### La configuration
+
+quarkus.http.port=8083
+
+@ConfigProperty(name = "greeting.default.message")
+private String greetingIntro;
+
+@ConfigProperty(name = "greeting.message.ponctuation")
+private Optional<String> ponctuation;
+
+greeting.default.message=Salut
+%dev.greeting.default.message=Salut (dev)
+%sihm.greeting.default.message=Salut (sihm)
+%test.greeting.default.message=Salut (test)
+
+greeting.message.ponctuation=!
+
+
+Jouer les test --> ça plante (normal)
+
+corriger les tests:
+
+```java
+    @Test
+    public void testHelloEndpoint() {
+        given()
+          .when().queryParam("nom", "test").get("/hello")
+          .then()
+             .statusCode(200)
+             .body(is("Salut (test) test!"));
+    }
+```
+
+### Client REST
+
+recréer une application
+
+mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=greeting-call -DclassName="org.acme.quickstart.GreetingResource" -Dpath="/hello"
+
+```java
+@RegisterRestClient(baseUri = "http://localhost:8083")
+@Produces({MediaType.TEXT_PLAIN})
+@Path("/hello")
+@ApplicationScoped
+public interface HelloRepository {
+
+  @GET
+  String hello(
+      @QueryParam("nom") String name
+  );
+
+}
+```
+
+```java
+    @Inject
+    @RestClient
+    private HelloRepository helloRepository;
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String hello() {
+        return helloRepository.hello("caller");
+    }
+```
+
+Configurons
+```
+org.acme.quickstart.repository.HelloRepository/mp-rest/url = http://localhost:8083
+org.acme.quickstart.repository.HelloRepository/mp-rest/scope=javax.inject.Singleton
+```
+```java
+@RegisterRestClient
+@Produces({MediaType.TEXT_PLAIN})
+@Path("/hello")
+public interface HelloRepository {
+```
+
+
+
 
 
 
