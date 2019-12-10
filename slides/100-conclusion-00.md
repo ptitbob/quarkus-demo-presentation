@@ -8,16 +8,15 @@ En résumé,
 * 28/11/2019 : v1.0.0
 * 3400 stars github
 * Projet vivant
-* Porté par redHat
+* Porté par redHat (plein d'autres)
 
- -@@-
+-@@-
  
- ### A évaluer
-
+#### `www.thoughtworks.com/radar`
  
- ![](images/thoughtworks_radar.jpg)<!-- .element style="max-width:60%" -->
+![](images/thoughtworks_radar.jpg)<!-- .element style="max-width:7 0%" -->
  
-**`www.thoughtworks.com/radar`**
+*Languages & Frameworks*<!-- .element style="color: #e57125; float: right; font-size: 80%" -->
 
  -@@-
  
