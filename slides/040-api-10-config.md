@@ -64,6 +64,7 @@ String.format(
 ```
 greeting.default.message=Salut
 %dev.greeting.default.message=Salut (dev)
+%test.greeting.default.message=Salut (test)
 ```
 <!-- .element class="fragment" -->
 

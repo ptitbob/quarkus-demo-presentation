@@ -2,7 +2,7 @@
 
 ***Ou comment exposer une API REST***
 
-**JSR 370**<!-- .element style="color: #e57125; float: right; font-size: 80%" -->
+**JSR 370 (v2.1)**<!-- .element style="color: #e57125; float: right; font-size: 80%" -->
 
 -@@-
 
