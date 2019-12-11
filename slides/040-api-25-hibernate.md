@@ -165,7 +165,7 @@ Active record, ça donne quoi ?
 
 ```java
 public Person getPersonById(Long id) {
-  return Person.findById()
+  return Person.findById(id)
 }
 ```
 ou par inférence de requête
@@ -179,7 +179,7 @@ public Person getPersonByLogin(String login) {
 
 ### Hibernate with *Panache*
 
-Ajout de méthodes "active record" directement sur l'entité
+Ajout de méthodes directement sur l'entité
 
 ```java
 @Entity
@@ -190,17 +190,53 @@ public class Person extends PanacheEntity {
   ...
   public Boolean active;
 
-  public static List<Person> listByActiveFlag(
-      Boolean activeFlag
-  ) {
+  public static List<Person> listByActiveFlag(Boolean activeFlag) {
     return find("active", activeFlag).list();
+  }
+
+  public static List<Person> searchActiveByLogin(String login) {
+    return list("active = ?1 and title like ?2", true, login).list();
   }
 }
 ```
+<!-- .element style="font-size: 40%;" -->
+
 
 -@@-
 
 ### Hibernate with *Panache*
+
+> Dans le code, cela donne quoi ?
+> 
+-@@-
+
+> Convaincu par les active record ?<!-- .element style="font-size: 200%" -->
+
+-@@-
+
+Active record<!-- .element class="fragment" -->
+
+**Tests unitaire**<!-- .element class="fragment" -->
+
+***méthodes statique***<!-- .element class="fragment" style="color: darkred" -->
+
+***Et je les mets où mes mock ?***<!-- .element class="fragment" style="color: red; font-size: 150%" -->
+
+-@@-
+
+<!-- .slide: data-background="images/coyoyefalling02.gif" data-background-size="110%" data-background-position="center center" -->
+
+Active record
+
+**Tests unitaire**
+
+***méthodes statique***<!-- .element style="color: darkred" -->
+
+***Et je les mets où mes mock ?***<!-- .element style="color: red; font-size: 150%" -->
+
+-@@-
+
+### Repository with *Panache*
 
 Possibilité d'utiliser des "repository"
 
@@ -214,24 +250,46 @@ public interface PanacheRepository<Entity>
 
 -@@-
 
-### Hibernate with *Panache*
+### Repository with *Panache*
 
-Possibilité d'utiliser des "repository"
+```java
+@Entity
+public class Person extends PanacheEntity {
+  @NotBlank @Column(unique = true)
+  public String login;
+  ...
+  public Boolean active;
+}
+```
+<!-- .element style="font-size: 40%;" -->
 
 ```java
 @ApplicationScoped
-public class PersonRepository 
-  implements PanacheRepository<Person> {
-  ...
+public class PersonRepository implements PanacheRepository<Person> {
   public Person findByName(String name){
       return find("name", name).firstResult();
   }
-  ...
 }
 ```
+<!-- .element style="font-size: 40%;" -->
+
+```java
+@Inject
+PersonRepository personRepository;
+
+@GET @Path(("{login}"))
+public Person getPersonByLogin(@PathParam("login") String login) {
+  return Person.find("login", login).firstResult();
+}
+```
+<!-- .element style="font-size: 40%;" -->
 
 -@@-
 
-### Hibernate with *Panache*
+### Hibernate with panache
 
-> Dans le code, cela donne quoi ?
+Entre **Active Record** et l'approche **Repository**
+
+> il vous faudra choisir
+
+Entre tests "pseudo intégration" et "unitaire avec mock"<!-- .element class="fragment" -->
