@@ -165,7 +165,7 @@ Active record, ça donne quoi ?
 
 ```java
 public Person getPersonById(Long id) {
-  return Person.findById()
+  return Person.findById(id)
 }
 ```
 ou par inférence de requête
