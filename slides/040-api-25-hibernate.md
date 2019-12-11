@@ -164,16 +164,22 @@ create table person
 Active record, ça donne quoi ?
 
 ```java
+@GET
 public Person getPersonById(Long id) {
   return Person.findById(id)
 }
-```
-ou par inférence de requête
-```java
+@GET
 public Person getPersonByLogin(String login) {
   return Person.find("login", login).firstResult();
 }
+@POST @Transactional
+public Response persistPerson(@Valid Person person) {
+  person.persist();
+  ...
+  return Response.created().build();
+}
 ```
+<!-- .element style="font-size: 40%;" -->
 
 -@@-
 
@@ -191,11 +197,11 @@ public class Person extends PanacheEntity {
   public Boolean active;
 
   public static List<Person> listByActiveFlag(Boolean activeFlag) {
-    return find("active", activeFlag).list();
+    return list("active", activeFlag).list();
   }
 
   public static List<Person> searchActiveByLogin(String login) {
-    return list("active = ?1 and title like ?2", true, login).list();
+    return list("active = ?1 and title like ?2", true, login);
   }
 }
 ```
