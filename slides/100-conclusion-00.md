@@ -2,7 +2,7 @@
 
 -@@- 
 
-En résumé,
+### En résumé,
 
 * Lancé en avril 2019
 * 28/11/2019 : v1.0.0
@@ -41,3 +41,8 @@ En résumé,
 ![](images/red-pill.png)<!-- .element style="max-width: 70%" -->
 
 > L'appenterez vous ?
+
+-@-
+
+### Presentation : [bit.ly/hm_quarkus](http://bit.ly/hm_quarkus)<!-- .element style="color: #e57125;" -->
+### Sources : [bit.ly/hm_quarkus_src](http://bit.ly/hm_quarkus_src)<!-- .element style="color: #e57125;" -->
