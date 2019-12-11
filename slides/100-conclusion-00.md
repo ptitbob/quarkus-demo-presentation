@@ -14,7 +14,7 @@
  
 #### `www.thoughtworks.com/radar`
  
-![](images/thoughtworks_radar.jpg)<!-- .element style="max-width:7 0%" -->
+![](images/thoughtworks_radar.jpg)<!-- .element style="max-width:68%" -->
  
 *Languages & Frameworks*<!-- .element style="color: #e57125; float: right; font-size: 80%" -->
 
@@ -44,5 +44,6 @@
 
 -@-
 
-### Presentation : [bit.ly/hm_quarkus](http://bit.ly/hm_quarkus)<!-- .element style="color: #e57125;" -->
+### Présentation : [bit.ly/hm_quarkus](http://bit.ly/hm_quarkus)<!-- .element style="color: #e57125;" -->
 ### Sources : [bit.ly/hm_quarkus_src](http://bit.ly/hm_quarkus_src)<!-- .element style="color: #e57125;" -->
+### documentation : [quarkus.io](https://quarkus.io/)<!-- .element style="color: #e57125;" -->
