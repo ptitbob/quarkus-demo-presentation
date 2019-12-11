@@ -24,7 +24,7 @@
 
 ***Alors il peut être porté sous Quarkus***
 
-Et au cas être compilé nativement...<!-- .element class="fragment" -->
+Et au cas où, être compilé nativement...<!-- .element class="fragment" -->
 
 -@@-
 

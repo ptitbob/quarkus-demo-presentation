@@ -43,8 +43,8 @@ Mais pour des besoins avancés, il est possible de mettre en place ce fichier
 
 *2 pattern possible*
 
-* approche DAO (aka Repository dans un autre monde)<!-- .element class="fragment" -->
-* Approche Active record (JPA with panache)<!-- .element class="fragment" -->
+* approche DAO (Repository)<!-- .element class="fragment" -->
+* Approche Active record (H7E with panache)<!-- .element class="fragment" -->
 
 -@@-
 
@@ -70,13 +70,9 @@ Mais pour des besoins avancés, il est possible de mettre en place ce fichier
 ### Hibernate avec Panache
 
 ```shell
-mvn quarkus:add-extension
-  -Dextensions="quarkus-hibernate-orm-panache"
+mvn quarkus:add-extension 
+  -Dextensions=quarkus-hibernate-orm-panache
 ```
-
--@@-
-
-### Hibernate avec Panache
 
 ```xml
 <dependency>
@@ -183,7 +179,7 @@ public Person getPersonByLogin(String login) {
 
 ### Hibernate with *Panache*
 
-Ajout de méthodes "active" record directement sur l'entité
+Ajout de méthodes "active record" directement sur l'entité
 
 ```java
 @Entity
