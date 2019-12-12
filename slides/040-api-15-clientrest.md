@@ -31,15 +31,15 @@ et une extension
 ### Client REST
 
 ```java
-@RegisterRestClient(baseUri = "http://localhost:8083")
+@RegisterRestClient(baseUri = "http://localhost:8080")
 @Produces({MediaType.TEXT_PLAIN})
 @Path("/hello")
 @ApplicationScoped
-public interface HelloRepository {
+public interface HelloClient {
+
   @GET
-  String hello(
-      @QueryParam("nom") String name
-  );
+  String hello();
+
 }
 ```
 
@@ -48,15 +48,15 @@ public interface HelloRepository {
 ### Client REST
 
 ```java
-@Inject
-@RestClient
-private HelloRepository helloRepository;
+    @Inject
+    @RestClient
+    HelloClient helloClient;
 
-@GET
-@Produces(MediaType.TEXT_PLAIN)
-public String hello() {
-    return helloRepository.hello("caller");
-}
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String hello() {
+        return "call --> " + helloClient.hello();
+    }
 ```
 
 -@@-

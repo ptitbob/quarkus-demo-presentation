@@ -6,9 +6,6 @@
 `ps x -o pid,rss,command | grep java`
 
 
-
-
-
 ## Demo Spring
 
 Jouons un peu avec la mémoire
@@ -23,13 +20,19 @@ Lancer l'app exemple Spring sans limitation
 
 ## Création projet
 
-mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=getting-started -DclassName="org.acme.quickstart.GreetingResource" -Dpath="/hello"
+app1
+
+mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=hello -DclassName="org.acme.quickstart.HelloResource" -Dpath="/hello"
+
+
+
+
+
+
 
 ## Jouons avec las APIs
 
 ### JAXRS
-
-mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=getting-started -DclassName="org.acme.quickstart.GreetingResource" -Dpath="/hello"
 
 public class ItemDTO {
 
@@ -83,7 +86,9 @@ corriger les tests:
 
 recréer une application
 
-mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=greeting-call -DclassName="org.acme.quickstart.GreetingResource" -Dpath="/hello"
+mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create -DprojectGroupId=org.acme -DprojectArtifactId=hello-call -DclassName="org.acme.quickstart.GreetingResource" -Dpath="/call"
+
+mvn quarkus:add-extensions -Dextension=quarkus-rest-client 
 
 ```java
 @RegisterRestClient(baseUri = "http://localhost:8083")
