@@ -74,7 +74,7 @@ Closed-world assumption
 
 ### Quarkus & GraalVM
 
-1. Les fichiers de config
+1. Les fichiers de config (properties, yaml...)
 2. Le classpath **(annotation, getter, setter)**<!-- .element style="font-size: 65%" -->
 3. Meta modele
 4. Reflexion & proxy

@@ -145,15 +145,27 @@ L'id "panache" a besoin d'une sequence hibernate !<!-- .element class="fragment"
 
 ### Hibernate with *Panache*
 
+```java
+@MappedSuperclass
+public abstract class PanacheEntity extends PanacheEntityBase {
+    @Id
+    @GeneratedValue
+    public Long id;
+    ...
+}
+
+```
+<!-- .element style="font-size: 40%;" -->
 ```sql
 create sequence hibernate_sequence;
 ...
 create table person
   (
-    id  bigint  not null ,
+    id  bigint  not null default nextval('hibernate_sequence'),
     ...
   );
 ```
+<!-- .element style="font-size: 50%;" class="fragment" -->
 
 > A retenir...
 
