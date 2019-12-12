@@ -297,7 +297,7 @@ PersonRepository personRepository;
 
 @GET @Path(("{login}"))
 public Person getPersonByLogin(@PathParam("login") String login) {
-  return Person.find("login", login).firstResult();
+  return personRepository.find("login", login).firstResult();
 }
 ```
 <!-- .element style="font-size: 40%;" -->
